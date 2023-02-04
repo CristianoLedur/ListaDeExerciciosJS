@@ -1,0 +1,13 @@
+let pintarArea = prompt("Informe o tamanho da area a ser pintada em metros: ");
+let litros = parseInt(pintarArea) / 6;
+let latasGrandes =  Math.ceil(litros) / 18;
+let lataPequenas = Math.ceil(litros) / 3.6;
+let restoGrandes = latasGrandes % 18;
+let divInteiraGrandes = Math.floor(parseInt(litros) / 18);
+let divInteiraPequena = Math.ceil(restoGrandes / 3.6);
+let valorGrandes  = 80 * Math.ceil(latasGrandes);
+let valorPequenas = 25 * Math.ceil(lataPequenas);
+let valorTotal = (80 * Math.ceil(divInteiraGrandes)) + (25 * Math.ceil(divInteiraPequena));
+alert(`Valor total em latas grandes: ${valorGrandes}\nLatas 18L: ${Math.ceil(latasGrandes)}`);
+alert(`Valor total em latas pequenas: ${valorPequenas}\nLatas 3.6L: ${Math.ceil(lataPequenas)}`);
+alert(`Valor Total: ${valorTotal}\nLatas Grandes: ${divInteiraGrandes}\nLatas Pequenas: ${divInteiraPequena}`);
